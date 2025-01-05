@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+            .main-container {
+              max-width: 480px;
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            .page-wrapper {
+              width: 100%;
+              overflow: hidden;
+            }
+
+            .nav-header {
+              background-color: #fff;
+              width: 100%;
+              min-height: 64px;
+              padding: 0 12px 0 20px;
+              display: flex;
+              align-items: center;
+            }
+
+            .logo-wrapper {
+              min-height: 36px;
+              display: flex;
+              gap: 24px;
+              margin: auto 0;
+            }
+
+            .brand-name {
+              font: 700 35px Roboto, sans-serif;
+              color: #000;
+            }
+
+            .hero-section {
+              background-color: #fff;
+              padding: 64px 20px;
+              font-family: Roboto, sans-serif;
+            }
+
+            .hero-content {
+              color: var(--Text-primary, #000);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .hero-title {
+              font-size: 40px;
+              font-weight: 700;
+              line-height: 48px;
+            }
+
+            .hero-description {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin-top: 20px;
+            }
+
+            .cta-button {
+              background-color: #ffffff;
+              padding: 12px 24px;
+              border: 1px solid #000;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 24px;
+              width: 100%;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              max-width: 316px;
+              text-align: center;
+              cursor: pointer;
+            }
+
+            .hero-image {
+              width: 100%;
+              margin-top: 48px;
+              aspect-ratio: 0.96;
+              object-fit: contain;
+            }
+
+            .features-section {
+              background-color: #fff;
+              padding: 64px 20px;
+              font-family: Roboto, sans-serif;
+            }
+
+            .features-title {
+              color: var(--Text-primary, #000);
+              text-align: center;
+              font-size: 32px;
+              font-weight: 700;
+              line-height: 38px;
+            }
+
+            .features-grid {
+              margin-top: 48px;
+              display: flex;
+              flex-direction: column;
+              gap: 48px;
+            }
+
+            .feature-card {
+              text-align: left;
+              margin-top: 50px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .feature-icon {
+              width: 48px;
+              aspect-ratio: 1;
+              object-fit: contain;
+            }
+
+            .feature-heading {
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 28px;
+              margin-top: 20px;
+            }
+
+            .feature-text {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin-top: 20px;
+            }
+
+            .link-button {
+              display: flex;
+              gap: 8px;
+              color: #000;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 24px;
+              cursor: pointer;
+            }
+
+            .link-icon {
+              width: 24px;
+              aspect-ratio: 1;
+              object-fit: contain;
+            }
+
+            .steps-section {
+              background-color: #fff;
+              padding: 64px 20px;
+              font-family: Roboto, sans-serif;
+              color: var(--Text-primary, #000);
+            }
+
+            .steps-grid {
+              display: flex;
+              flex-direction: column;
+              gap: 48px;
+              margin-top: 48px;
+            }
+
+            .step-card {
+              text-align: left;
+            }
+
+            .step-card img {
+              text-align: center;
+            }
+
+            .testimonial-section {
+              background-color: #fff;
+              padding: 64px 20px;
+              font-family: Roboto, sans-serif;
+            }
+
+            .testimonial-content {
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+            }
+
+            .star-rating {
+              display: flex;
+              gap: 4px;
+            }
+
+            .star-icon {
+              width: 20px;
+              aspect-ratio: 1.05;
+              object-fit: contain;
+            }
+
+            .testimonial-quote {
+              font: 700 20px/28px Roboto, sans-serif;
+              color: var(--Text-primary, #000);
+            }
+
+            .testimonial-author {
+              display: flex;
+              align-items: center;
+              gap: 16px;
+              font: 16px Roboto, sans-serif;
+              color: var(--Text-primary, #000);
+            }
+
+            .author-info {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .author-name {
+              font-weight: 600;
+            }
+
+            .author-title {
+              font-weight: 400;
+            }
+
+            .cta-section {
+              background-color: #fff;
+              padding: 64px 20px;
+              text-align: center;
+              font-family: Roboto, sans-serif;
+            }
+
+            .cta-title {
+              font-size: 36px;
+              font-weight: 700;
+              line-height: 43px;
+              color: var(--Text-primary, #000);
+            }
+
+            .cta-description {
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 20px;
+              color: var(--Text-primary, #000);
+            }
+
+            .secondary-button {
+              display: inline-block;
+              padding: 12px 24px;
+              border: 1px solid #000;
+              color: #000;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 24px;
+              cursor: pointer;
+            }
+
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              border: 0;
+            }
+            car-import-section {
+              background: #fff;
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+              font-family: Roboto, sans-serif;
+              color: var(--Text-primary, #000);
+              justify-content: center;
+              padding: 64px 28px;
+            }
+
+            .car-import-container {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .car-import-content {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .car-import-heading {
+              font-size: 36px;
+              font-weight: 700;
+              line-height: 1.2;
+            }
+
+            .car-import-description {
+              font-size: 16px;
+              line-height: 1.5;
+              margin: 20px 0 0;
+            }
+
+            .stats-list {
+              display: flex;
+              margin: 24px 0 0;
+              width: 100%;
+              flex-direction: column;
+              padding: 8px 0;
+            }
+
+            .stats-item {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .stats-item + .stats-item {
+              margin: 24px 0 0;
+            }
+
+            .stats-number {
+              font-size: 36px;
+              font-weight: 700;
+              line-height: 1.2;
+            }
+
+            .stats-text {
+              font-size: 16px;
+              line-height: 1.5;
+              margin: 8px 0 0;
+            }
+
+            .car-import-image {
+              aspect-ratio: 0.92;
+              object-fit: contain;
+              object-position: center;
+              width: 100%;
+              margin: 48px 0 0;
+            }
+            .pricing-section {
+              background: #fff;
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+              font-family: Roboto, sans-serif;
+              justify-content: center;
+              padding: 64px 20px;
+            }
+
+            .pricing-container {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+
+            .pricing-content {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+
+            .pricing-header {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              color: var(--Text-primary, #000);
+              justify-content: flex-start;
+            }
+
+            .pricing-tagline {
+              align-self: flex-start;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            .pricing-text-wrapper {
+              display: flex;
+              margin-top: 12px;
+              width: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+
+            .pricing-title {
+              font-size: 36px;
+              font-weight: 700;
+              line-height: 43px;
+            }
+
+            .pricing-description {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin-top: 20px;
+            }
+
+            .pricing-actions {
+              display: flex;
+              margin-top: 24px;
+              width: 100%;
+              align-items: center;
+              gap: 16px;
+              font-size: 16px;
+              color: #000;
+              font-weight: 400;
+              justify-content: center;
+            }
+
+            .learn-more-btn {
+              align-self: stretch;
+              gap: 8px;
+              overflow: hidden;
+              margin: auto 0;
+              padding: 12px 24px;
+              border: 1px solid #000;
+              cursor: pointer;
+              background: transparent;
+            }
+
+            .pricing-image {
+              aspect-ratio: 0.96;
+              object-fit: contain;
+              object-position: center;
+              width: 100%;
+              margin-top: 48px;
+            }
+
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              border: 0;
+            }
+            .vehicle-inspection {
+              background-color: #fff;
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+              font-family: Roboto, sans-serif;
+              color: var(--Text-primary, #000);
+              justify-content: center;
+              padding: 64px 20px;
+            }
+            .inspection-container {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+            .inspection-content {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+            .inspection-title {
+              font-size: 32px;
+              font-weight: 700;
+              line-height: 38px;
+            }
+            .inspection-description {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 27px;
+              margin-top: 20px;
+            }
+            .inspection-image {
+              aspect-ratio: 0.96;
+              object-fit: contain;
+              object-position: center;
+              width: 100%;
+              margin-top: 48px;
+            }
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              border: 0;
+            }
+            .visually-hidden {
+              clip: rect(0 0 0 0);
+              clip-path: inset(50%);
+              height: 1px;
+              overflow: hidden;
+              position: absolute;
+              white-space: nowrap;
+              width: 1px;
+            }
+
+            .blog-section {
+              background-color: rgba(238, 238, 238, 1);
+              display: flex;
+              min-height: 688px;
+              width: 100%;
+              flex-direction: column;
+              padding: 23px 24px;
+            }
+
+            .article-grid {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .article-card {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              padding: 8px 0;
+            }
+
+            .article-image {
+              aspect-ratio: 1.74;
+              object-fit: contain;
+              width: 100%;
+            }
+
+            .article-content {
+              display: flex;
+              margin-top: 24px;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .article-heading {
+              width: 100%;
+              font-size: 16px;
+              color: var(--Color-Neutral-black, #000);
+              font-weight: 600;
+            }
+
+            .call-action {
+              color: var(--Link-primary, #000);
+              font-size: 14px;
+              font-weight: 400;
+              text-decoration-line: underline;
+              margin-top: 8px;
+            }
+
+            .testimonial-card {
+              display: flex;
+              margin-top: 8px;
+              width: 100%;
+              flex-direction: column;
+              padding: 8px 0;
+            }
+
+            .testimonial-content {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .testimonial-title {
+              color: var(--Color-Neutral-black, #000);
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            .testimonial-subtitle {
+              color: var(--Text-primary, #000);
+              font-size: 14px;
+              font-weight: 400;
+              margin-top: 4px;
+            }
+
+            .cta-button {
+              display: flex;
+              margin-top: 16px;
+              min-height: 32px;
+              align-items: center;
+              gap: 8px;
+              font-size: 16px;
+              color: rgba(0, 0, 0, 1);
+              font-weight: 400;
+              padding: 4px 0;
+            }
+
+            .cta-text {
+              margin: auto 0;
+            }
+
+            .cta-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              width: 24px;
+              margin: auto 0;
+            }
+            .footer {
+              background-color: #fff;
+              display: flex;
+              max-width: 375px;
+              flex-direction: column;
+              overflow: hidden;
+              padding: 48px 20px;
+            }
+            .footer-content {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              color: var(--Link-primary, #000);
+              font: 600 14px Roboto, sans-serif;
+            }
+            .footer-nav {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+            }
+            .nav-list {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              padding-top: 20px;
+              line-height: 2.5;
+            }
+            .nav-link {
+              flex: 1;
+              width: 100%;
+              padding: 8px 0;
+              text-decoration: none; /* Прибирає підкреслення */
+              color: inherit;
+            }
+            .footer-bottom {
+              display: flex;
+              margin-top: 12px;
+              width: 100%;
+              flex-direction: column;
+            }
+            .logo-wrapper {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .logo {
+              aspect-ratio: 4;
+              object-fit: contain;
+              object-position: center;
+              width: 192px;
+              max-width: 100%;
+            }
+            .divider {
+              background-color: #000;
+              min-height: 1px;
+              margin: 24px 0;
+              width: 100%;
+              border: 1px solid #000;
+            }
+            .footer-info {
+              display: flex;
+              width: 100%;
+              padding-bottom: 16px;
+              flex-direction: column;
+            }
+            .social-links {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+            }
+            .social-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 24px;
+            }
+            .copyright {
+              color: var(--Text-primary, #000);
+              margin-top: 16px;
+              font: 400 14px Roboto, sans-serif;
+            }
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              border: 0;
+            }
+
+            .visually-hidden {
+              width: 100%;
+              clip: rect(0 0 0 0);
+              clip-path: inset(50%);
+              height: 1px;
+              overflow: hidden;
+              position: absolute;
+              white-space: nowrap;
+              width: 1px;
+            }
+
+            .blog-section {
+              background-color: #eee;
+              display: flex;
+              max-width: 450px;
+              flex-direction: column;
+              font-family: Roboto, sans-serif;
+            }
+
+            .blog-grid {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .blog-card {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              padding: 8px 0;
+            }
+
+            .blog-image {
+              aspect-ratio: 1.74;
+              object-fit: contain;
+              max-width: 450px;
+              padding-right: 24px;
+            }
+
+            .blog-content {
+              display: flex;
+              margin-top: 24px;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .blog-title {
+              width: 100%;
+              font-size: 16px;
+              color: var(--Color-Neutral-black, #000);
+              font-weight: 600;
+            }
+
+            .cta-link {
+              color: var(--Link-primary, #000);
+              font-size: 14px;
+              font-weight: 400;
+              text-decoration-line: underline;
+              margin-top: 8px;
+            }
+
+            .testimonial-card {
+              display: flex;
+              margin-top: 8px;
+              width: 100%;
+              flex-direction: column;
+              padding: 8px 0;
+            }
+
+            .testimonial-content {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .testimonial-header {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .testimonial-title {
+              color: var(--Color-Neutral-black, #000);
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            .testimonial-subtitle {
+              color: var(--Text-primary, #000);
+              font-size: 14px;
+              font-weight: 400;
+              margin-top: 4px;
+            }
+
+            .action-button {
+              display: flex;
+              margin-top: 16px;
+              min-height: 32px;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              font-size: 16px;
+              color: #000;
+              font-weight: 400;
+              margin-right: 20px;
+            }
+
+            .button-text {
+              margin: auto 0;
+            }
+
+            .button-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              width: 24px;
+              margin: auto 0;
+            }
+    </style>
+
+    <div class="main-container">
+      <div class="page-wrapper">
+        <header class="nav-header" role="banner">
+          <div class="logo-wrapper">
+            <h1 class="brand-name">Urban Auto</h1>
+          </div>
+        </header>
+
+        <main role="main">
+          <section class="hero-section">
+            <div class="hero-content">
+              <h2 class="hero-title">
+                Купуй автомобіль своєї мрії з легкістю та вигодою до 40%
+                сьогодні!
+              </h2>
+              <p class="hero-description">
+                Від вибору до доставки та ремонту ми дбаємо про кожну деталь,
+                щоб ви могли насолоджуватися своїм новим автомобілем без
+                клопоту.
+              </p>
+              <button class="cta-button" type="button">Замовити дзвінок</button>
+            </div>
+            <img
+              src="./photo_2025-01-05_14-48-01.jpg"
+              alt="Luxury car showcase"
+              class="hero-image"
+            />
+          </section>
+
+          <section class="features-section">
+            <h2 class="features-title">
+              Насолоджуйтеся легкою покупкою автомобіля з нашими довіреними
+              спеціалістами та послугами
+            </h2>
+            <div class="features-grid">
+              <article class="feature-card">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/95bcd00233d75dd56f463c14335eceb2eb99c46acb82e9e49543a8de30ec595b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="feature-icon"
+                />
+                <h3 class="feature-heading">
+                  Глобальне охоплення ринку: Купуйте автомобілі зі США, Європи
+                  та Азії без особливих зусиль
+                </h3>
+                <p class="feature-text">
+                  Наша послуга «під ключ» забезпечує безперебійний процес від
+                  покупки до реєстрації.
+                </p>
+                <button class="cta-button" type="button">
+                  Замовити дзвінок
+                </button>
+              </article>
+
+              <article class="feature-card">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/95bcd00233d75dd56f463c14335eceb2eb99c46acb82e9e49543a8de30ec595b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="feature-icon"
+                />
+                <h3 class="feature-heading">
+                  Прозоре ціноутворення: жодних прихованих комісій, лише чесні
+                  та чіткі умови для вас
+                </h3>
+                <p class="feature-text">
+                  Відчуйте комфорт і спокій завдяки нашому турботливому підходу.
+                </p>
+                <button class="cta-button" type="button">
+                  Замовити дзвінок
+                </button>
+              </article>
+
+              <article class="feature-card">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/95bcd00233d75dd56f463c14335eceb2eb99c46acb82e9e49543a8de30ec595b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="feature-icon"
+                />
+                <h3 class="feature-heading">
+                  Комплексна перевірка автомобіля та повна документація для
+                  ваших потреб
+                </h3>
+                <p class="feature-text">
+                  Ми дбаємо про те, щоб ваш автомобіль повністю відповідав усім
+                  стандартам, перш ніж опинитися у ваших руках.
+                </p>
+                <button class="cta-button" type="button">
+                  Замовити дзвінок
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <section class="steps-section">
+            <h2 class="features-title">
+              Покупка вашого автомобіля стала простіше
+            </h2>
+            <p class="feature-text">
+              Наш спрощений процес позбавляє від клопоту покупки автомобіля
+              вашої мрії. Від вибору вашого транспортного засобу до його
+              доставки ми керуємо кожним кроком з увагою та досвідом.
+            </p>
+
+            <div class="steps-grid">
+              <article class="step-card">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/95bcd00233d75dd56f463c14335eceb2eb99c46acb82e9e49543a8de30ec595b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="feature-icon"
+                />
+                <h3 class="feature-heading">
+                  Крок 1. Виберіть автомобіль своєї мрії
+                </h3>
+                <p class="feature-text">
+                  Замовте підбір автомобіля у наших менеджерів або поділіться
+                  своїми вподобаннями що б ми підібрали індивідуально автомобіль
+                  для вас!
+                </p>
+              </article>
+
+              <article class="step-card">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/95bcd00233d75dd56f463c14335eceb2eb99c46acb82e9e49543a8de30ec595b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="feature-icon"
+                />
+                <h3 class="feature-heading">
+                  Крок 2. Отримайте детальну пропозицію
+                </h3>
+                <p class="feature-text">
+                  Отримайте прозору оцінку, яка включає всі витрати.
+                </p>
+              </article>
+
+              <article class="step-card">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/95bcd00233d75dd56f463c14335eceb2eb99c46acb82e9e49543a8de30ec595b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="feature-icon"
+                />
+                <h3 class="feature-heading">Крок 3. Ми зробимо все за вас</h3>
+                <p class="feature-text">
+                  Відпочиньте, поки ми подбаємо про платежі та доставку
+                  автомобіля.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="testimonial-section">
+            <div class="testimonial-content">
+              <div
+                class="star-rating"
+                role="img"
+                aria-label="5 out of 5 stars rating"
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e4df2cd1a7939a31855fa8e82b1b9421fc9a6af4643291313cbb9984d060bb0?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="star-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c0c0bd8cc1994f0be2e0642388ec16bd4b1bc4935b17d8279bcaf5016e8ee791?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="star-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/baa506a0898dadef1fc70d04bdf8d48bbb6dc05e834904d5ab10773a03830143?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="star-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/baa506a0898dadef1fc70d04bdf8d48bbb6dc05e834904d5ab10773a03830143?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="star-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/91d3dc9c2ee6e66b36a93cb1f8ae9cf8d9165b92cb08d0a068d0b07e99686fb7?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="star-icon"
+                />
+              </div>
+              <section class="car-import-section">
+                <div class="car-import-container">
+                  <div class="car-import-content">
+                    <h1 class="car-import-heading">
+                      Безперебійна доставка ваошого купленого автомобіля
+                    </h1>
+                    <p class="car-import-description">
+                      Наша комплексна служба документації гарантує, що кожен
+                      аспект покупки вашого автомобіля буде оброблений з
+                      точністю. Від покупки автомобіля на аукціоні до митного
+                      оформлення ми подбаємо про все, щоб ви могли зосередитися
+                      на насолоді своїм новим автомобілем.
+                    </p>
+                    <div class="stats-list">
+                      <div class="stats-item">
+                        <div class="stats-number">100%</div>
+                        <p class="stats-text">
+                          Експертне оформлення всіх документів.
+                        </p>
+                      </div>
+                      <div class="stats-item">
+                        <div class="stats-number">100%</div>
+                        <p class="stats-text">
+                          Доставка автомобіля стала простою та ефективною.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="./7832dbe0f0141c11cca41f5b65b0c116.jpg"
+                    class="car-import-image"
+                    alt="Car import documentation and customs clearance service illustration"
+                  />
+                </div>
+              </section>
+              <section
+                class="vehicle-inspection"
+                aria-label="Vehicle Inspection Services"
+              >
+                <div class="inspection-container">
+                  <div class="inspection-content">
+                    <h2 class="inspection-title">
+                      Наші комплексні послуги з огляду транспортних засобів
+                      гарантують вам перевірку автомобіля
+                    </h2>
+                    <p class="inspection-description">
+                      Наші ретельні перевірки автомобіля гарантують, що
+                      автомобіль вашої мрії відповідає дійсності. Довіртеся нам,
+                      щоб виявити будь-які потенційні проблеми перед покупкою,
+                      щоб ви були спокійні.
+                    </p>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="./WhatIncluded.jpg"
+                    class="inspection-image"
+                    alt="Vehicle inspection service demonstration"
+                  />
+                </div>
+              </section>
+              <section class="pricing-section" aria-labelledby="pricing-title">
+                <div class="pricing-container">
+                  <div class="pricing-content">
+                    <header class="pricing-header">
+                      <p class="pricing-tagline">Купуй зараз, плати потім</p>
+                      <div class="pricing-text-wrapper">
+                        <h2 id="pricing-title" class="pricing-title">
+                          Гнучкі варіанти фінансування для автомобіля вашої мрії
+                        </h2>
+                        <p class="pricing-description">
+                          Наші фінансові рішення розроблені відповідно до вашого
+                          бюджету, що полегшує, ніж будь-коли, купити автомобіль
+                          вашої мрії під дім. Насолоджуйтеся
+                          конкурентоспроможними тарифами та індивідуальними
+                          планами, які відповідають вашим фінансовим потребам.
+                        </p>
+                      </div>
+                    </header>
+                    <div class="pricing-actions">
+                      <button class="learn-more-btn" tabindex="0">
+                        Розрахувати свій план
+                      </button>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="./29aa30b86a878113157b9dc5cd69a6cc.jpg"
+                    class="pricing-image"
+                    alt="Car financing options illustration"
+                  />
+                </div>
+              </section>
+
+              <blockquote class="testimonial-quote">
+                «Urban Auto зробило покупку автомобіля мрії легким! Їхнє
+                обслуговування було винятковим від початку до кінця».
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <span class="author-name">John Doe</span>
+                  <span class="author-title">Satisfied Customer</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="cta-section">
+            <h2 class="cta-title">Отримайте автомобіль своєї мрії сьогодні!</h2>
+            <p class="cta-description">
+              Розблокуйте найпростіший спосіб імпорту автомобіля. Отримайте
+              безкоштовну пропозицію зараз!
+            </p>
+            <button class="secondary-button" type="button">
+              Замовити послугу
+            </button>
+          </section>
+
+          <section class="blog-section" aria-label="Blog and Testimonials">
+            <div class="blog-grid">
+              <article class="blog-card">
+                <img
+                  loading="lazy"
+                  src="./2.jpg"
+                  class="blog-image"
+                  alt="Showcase of our delivered vehicles"
+                />
+                <div class="blog-content">
+                  <h2 class="blog-title">Машини що ми привезли</h2>
+                  <a href="#" class="cta-link" tabindex="0">Замовити дзвінок</a>
+                </div>
+              </article>
+
+              <article class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-header">
+                    <h2 class="testimonial-title">Наші клієнти</h2>
+                    <p class="testimonial-subtitle">
+                      Історії щасливих клієнтів
+                    </p>
+                  </div>
+                  <a href="#" class="cta-link" tabindex="0">Замовит дзвінок</a>
+                </div>
+              </article>
+            </div>
+
+            <button class="action-button" tabindex="0">
+              <span class="button-text">Підібрати автомобіль</span>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e900c3269ca5f6a493a33fa599a913e82e159e9406689a982db77baa96b49080?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                class="button-icon"
+                alt=""
+              />
+            </button>
+          </section>
+
+          <footer class="footer" role="contentinfo">
+            <nav
+              class="footer-content"
+              role="navigation"
+              aria-label="Footer Navigation"
+            >
+              <div class="footer-nav">
+                <ul class="nav-list">
+                  <li>
+                    <a href="https://www.urbanauto.com.ua/" class="nav-link"
+                      >Про нас</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.urbanauto.com.ua/contacts/"
+                      class="nav-link"
+                      >Контакти</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="footer-bottom">
+              <div class="logo-wrapper">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f920c4f8940b1732fc34f172f78f716a6347720e38aa1ace803d659a9db078b?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                  alt=""
+                  class="logo"
+                />
+              </div>
+              <hr class="divider" aria-hidden="true" />
+              <div class="footer-info">
+                <div class="social-links" role="list">
+                  <a href="#" aria-label="Visit our Facebook page">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/51ccee6ea62ebeef1ebb6e87c0902ba438e48fa10b851a6a4be37450142ca2a4?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                      alt=""
+                      class="social-icon"
+                    />
+                  </a>
+                  <a href="#" aria-label="Visit our Twitter page">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/4117019bd4077c68ffdaa93c6b070ce8e1bb91147398de89c3e32453203a0974?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                      alt=""
+                      class="social-icon"
+                    />
+                  </a>
+                  <a href="#" aria-label="Visit our Instagram page">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/3dbefda36a1b21740a0d6101178a9f4767b73664f8928baacee2099b1419cedf?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                      alt=""
+                      class="social-icon"
+                    />
+                  </a>
+                  <a href="#" aria-label="Visit our YouTube channel">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/458c3519d07148cb4a736cdd8ec44c8f83ec0dd87c107978a9abfa6ecaab4c5f?placeholderIfAbsent=true&apiKey=7b0e0bdda38748af9839613a860617a7"
+                      alt=""
+                      class="social-icon"
+                    />
+                  </a>
+                </div>
+                <p class="copyright">© 2025 Всі права захищені</p>
+              </div>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
